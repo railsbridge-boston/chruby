@@ -60,10 +60,12 @@ cd "$SRC_DIR"
 #
 # Install ruby-install (https://github.com/postmodern/ruby-install#readme)
 #
-ruby_install_version="0.3.3"
+# This can be reverted to an official tag in the upstream repo after a revision including Ruby 2.0.0-p481 is tagged.
+ruby_install_version="0.4.3.rbb201405.1"
 
 log "Downloading ruby-install ..."
-wget -O "ruby-install-$ruby_install_version.tar.gz" "https://github.com/postmodern/ruby-install/archive/v$ruby_install_version.tar.gz"
+# See above (upstream is https://github.com/postmodern/ruby-install)
+wget -O "ruby-install-$ruby_install_version.tar.gz" "https://github.com/railsbridge-boston/ruby-install/archive/v$ruby_install_version.tar.gz"
 
 log "Extracting ruby-install $ruby_install_version ..."
 tar -xzf "ruby-install-$ruby_install_version.tar.gz"
